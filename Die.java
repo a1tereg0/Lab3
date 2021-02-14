@@ -15,7 +15,7 @@ public class Die {
     public Die(int numSides, String diceType) {
         this.diceType = diceType;
         this.numSides = numSides;
-        this.sideUp = (int) Math.ceil(Math.random()*numSides);
+        this.sideUp = (int) Math.floor((Math.random()*numSides)+1);
     }
 
     public String getDiceType() {
@@ -40,7 +40,7 @@ public class Die {
     }
 
     public void roll() {
-        this.sideUp = (int) Math.ceil(Math.random() * this.numSides);
+        this.sideUp = (int) Math.floor((Math.random() * this.numSides)+1);
     }
 
 }
